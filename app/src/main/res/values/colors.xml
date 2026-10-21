@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="hijau_lombok">#0B6E4F</color>
+    <color name="hijau_lombok_gelap">#064A35</color>
+    <color name="hijau_lombok_muda">#D7EFE4</color>
+    <color name="krem_pasir">#F7F3EA</color>
+    <color name="teks_utama">#1D2B24</color>
+    <color name="teks_sekunder">#56665D</color>
+    <color name="garis_lembut">#E3E8E4</color>
+</resources>

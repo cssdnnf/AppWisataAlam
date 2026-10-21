@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">Uji Coba Aplikasi</string>
+
+    <!-- Halaman login -->
+    <string name="judul_login">Selamat Datang</string>
+    <string name="subjudul_login">Silakan login untuk menjelajahi keindahan alam Lombok.</string>
+    <string name="hint_username">Username</string>
+    <string name="hint_password">Password</string>
+    <string name="tombol_masuk">Masuk</string>
+    <string name="petunjuk_akun">Login demo: admin / admin12345</string>
+    <string name="login_berhasil">Login berhasil! Selamat datang, admin.</string>
+    <string name="login_gagal">Login gagal! Username atau password salah.</string>
+    <string name="login_kosong">Login gagal! Username dan password wajib diisi.</string>
+    <string name="deskripsi_gambar_login">Pemandangan pantai dan perbukitan di Pulau Lombok</string>
+
+    <!-- Akun demo -->
+    <string name="akun_admin_username" translatable="false">admin</string>
+    <string name="akun_admin_password" translatable="false">admin12345</string>
+
+    <!-- Halaman dashboard -->
+    <string name="judul_dashboard">Dashboard Lombok</string>
+    <string name="label_pesona">PESONA ALAM</string>
+    <string name="judul_pesona_lombok">Lombok</string>
+    <string name="lokasi_lombok">Pulau Lombok, Nusa Tenggara Barat</string>
+    <string name="selamat_datang_dashboard">Selamat Datang di Dashboard</string>
+    <string name="subjudul_dashboard">Login berhasil. Saatnya menjelajahi keindahan alam Lombok.</string>
+    <string name="judul_info_lombok">Keindahan Alam Lombok</string>
+    <string name="deskripsi_lombok">Lombok dikenal sebagai Pulau Seribu Masjid yang juga menyimpan lanskap alam memukau: gunung berapi, pantai berpasir putih, laut biru jernih, dan hutan tropis yang masih alami.</string>
+    <string name="judul_rinjani">Gunung Rinjani</string>
+    <string name="info_rinjani">Gunung berapi setinggi 3.726 mdpl dengan Danau Segara Anak yang jernih di dalam kawahnya.</string>
+    <string name="judul_pantai">Pantai dan Gili</string>
+    <string name="info_pantai">Pantai Kuta Mandalika, Tanjung Aan, dan Gili Trawangan menawarkan pasir putih serta air laut yang biru jernih.</string>
+    <string name="judul_air_terjun">Air Terjun</string>
+    <string name="info_air_terjun">Sendang Gile dan Tiu Kelep di kaki Rinjani dikelilingi hutan tropis yang sejuk dan asri.</string>
+    <string name="tombol_baca_selengkapnya">Baca Selengkapnya</string>
+    <string name="tombol_logout">Logout</string>
+    <string name="logout_berhasil">Logout berhasil. Sampai jumpa!</string>
+    <string name="kredit_foto">Sumber foto: Wikimedia Commons (CC0 dan CC BY-SA 4.0)</string>
+    <string name="deskripsi_gambar_rinjani">Gunung Rinjani dengan Danau Segara Anak</string>
+    <string name="deskripsi_gambar_pantai">Pantai dan perbukitan di Lombok</string>
+    <string name="deskripsi_gambar_air_terjun">Air Terjun Tiu Kelep di Lombok</string>
+
+    <!-- Halaman informasi lengkap -->
+    <string name="judul_informasi">Informasi Alam Lombok</string>
+    <string name="label_informasi_lengkap">INFORMASI LENGKAP</string>
+    <string name="judul_hero_informasi">Mengenal Alam Lombok</string>
+    <string name="deskripsi_gambar_hero_informasi">Gunung Rinjani terlihat dari Gili Trawangan</string>
+    <string name="intro_informasi">Pulau Lombok di Nusa Tenggara Barat menyimpan lanskap yang beragam, mulai dari gunung berapi, pantai berpasir putih, hingga air terjun di tengah hutan tropis. Berikut informasi lengkap tentang tiga keindahan alam yang paling dikenal dari Pulau Seribu Masjid.</string>
+    <string name="detail_rinjani_1">Gunung Rinjani adalah gunung berapi aktif setinggi 3.726 mdpl dan menjadi gunung berapi tertinggi kedua di Indonesia. Kawasannya termasuk Taman Nasional Gunung Rinjani, rumah bagi lutung, rusa, dan berbagai burung endemik. Di dalam kawahnya terbentang Danau Segara Anak yang berwarna biru kehijauan dan dianggap sakral oleh masyarakat sekitar.</string>
+    <string name="detail_rinjani_2">Pendakian umumnya dimulai dari Sembalun yang melewati padang savana, atau dari Senaru yang melewati hutan hujan tropis. Dari Plawangan Sembalun, pendaki dapat menikmati panorama danau dan puncak Rinjani, terutama saat matahari terbit. Waktu terbaik untuk mendaki adalah musim kemarau, sekitar April hingga November.</string>
+    <string name="detail_pantai_1">Pantai Kuta Mandalika terkenal dengan pasir putih, air laut biru, dan perbukitan karang di sekitarnya. Tidak jauh dari sana, Tanjung Aan menawarkan teluk dengan pasir yang lembut dan ombak yang tenang. Kawasan ini juga dikenal sebagai lokasi Sirkuit Mandalika.</string>
+    <string name="detail_pantai_2">Di sisi barat laut Lombok terdapat tiga Gili, yaitu Trawangan, Meno, dan Air. Gili Trawangan paling ramai dengan kafe serta aktivitas snorkeling, sedangkan Gili Meno lebih tenang. Ketiganya cocok untuk menikmati matahari terbenam dan melihat kehidupan bawah laut yang jernih.</string>
+    <string name="detail_air_terjun_1">Sendang Gile dan Tiu Kelep berada di Desa Senaru, di kaki Gunung Rinjani. Sendang Gile dapat dicapai dengan berjalan kaki sekitar 15 menit dari pintu masuk, sedangkan Tiu Kelep membutuhkan trekking lebih jauh melewati aliran air dan hutan tropis.</string>
+    <string name="detail_air_terjun_2">Air terjun ini berasal dari mata air pegunungan Rinjani yang mengalir jernih sepanjang tahun. Udara di sekitarnya sejuk dan rindang karena dikelilingi pepohonan. Datanglah pagi hari, gunakan alas kaki anti selip, dan ikuti arahan pemandu lokal agar perjalanan tetap aman.</string>
+    <string name="tombol_kembali_informasi">Kembali ke Dashboard</string>
+    <string name="kredit_foto_lengkap">Sumber foto: Jonas Verstuyft, HannoSEA, dan Lasthib (CC0); Yon illahi (CC BY-SA 4.0) via Wikimedia Commons.</string>
+</resources>
