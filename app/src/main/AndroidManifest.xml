@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -11,30 +12,87 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.UjiCobaAplikasi">
+
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.auth.LoginActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
-            android:name=".HalamanDashboardActivity"
-            android:exported="false"
-            android:label="@string/judul_dashboard"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".HalamanInformasiActivity"
-            android:exported="false"
-            android:label="@string/judul_informasi"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".HalamanKeduaActivity"
+            android:name=".ui.auth.RegisterActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ui.auth.ForgotPasswordActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ui.main.MainActivity"
+            android:exported="false"
+            android:launchMode="singleTop" />
+
+        <activity
+            android:name=".ui.detail.DestinationDetailActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.detail.CulinaryDetailActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.detail.ExperienceDetailActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.detail.MenuDetailActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.detail.NotificationsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.settings.EditProfileActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ui.settings.ChangePasswordActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ui.trip.TripPlansActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.trip.TripDetailActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ui.admin.AdminActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.admin.AdminListActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.admin.AdminEditorActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ui.admin.AdminImagePickerActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

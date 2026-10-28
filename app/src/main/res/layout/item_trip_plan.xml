@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="11dp"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardBackgroundColor="@color/permukaan"
+    app:cardCornerRadius="22dp"
+    app:cardElevation="0dp"
+    app:rippleColor="@color/nav_ripple"
+    app:strokeColor="@color/garis_lembut"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <FrameLayout
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:background="@drawable/bg_menu_icon_tile">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_gravity="center"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_menu_trip"
+                app:tint="@color/hijau_lombok" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tripItemTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/plus_jakarta_sans"
+                android:maxLines="1"
+                android:textColor="@color/teks_utama"
+                android:textFontWeight="800"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tripItemDates"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textColor="@color/hijau_lombok_gelap"
+                android:textFontWeight="600"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/tripItemNotes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="@color/teks_sekunder"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/tripItemCount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/teks_tersier"
+                android:textFontWeight="600"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="8dp"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_chevron_right"
+            app:tint="@color/teks_tersier" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

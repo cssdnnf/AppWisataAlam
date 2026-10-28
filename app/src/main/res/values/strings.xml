@@ -1,57 +1,403 @@
 <resources>
-    <string name="app_name">Uji Coba Aplikasi</string>
+    <string name="app_name">Jelajah Lombok</string>
+    <string name="brand_name">Jelajah</string>
+    <string name="brand_location">LOMBOK</string>
 
-    <!-- Halaman login -->
-    <string name="judul_login">Selamat Datang</string>
-    <string name="subjudul_login">Silakan login untuk menjelajahi keindahan alam Lombok.</string>
-    <string name="hint_username">Username</string>
-    <string name="hint_password">Password</string>
-    <string name="tombol_masuk">Masuk</string>
-    <string name="petunjuk_akun">Login demo: admin / admin12345</string>
-    <string name="login_berhasil">Login berhasil! Selamat datang, admin.</string>
-    <string name="login_gagal">Login gagal! Username atau password salah.</string>
-    <string name="login_kosong">Login gagal! Username dan password wajib diisi.</string>
-    <string name="deskripsi_gambar_login">Pemandangan pantai dan perbukitan di Pulau Lombok</string>
+    <!-- Umum -->
+    <string name="nav_home">Beranda</string>
+    <string name="nav_explore">Jelajah</string>
+    <string name="nav_saved">Tersimpan</string>
+    <string name="nav_profile">Profil</string>
+    <string name="action_see_all">Lihat semua</string>
+    <string name="action_save_changes">Simpan perubahan</string>
+    <string name="action_cancel">Batal</string>
+    <string name="action_close">Tutup</string>
+    <string name="label_demo">DATABASE AKTIF</string>
+    <string name="format_reviews">%1$s ulasan</string>
+    <string name="format_start_from">Mulai %1$s</string>
+    <string name="format_saved_count">%1$d item tersimpan</string>
+    <string name="format_search_result">%1$d destinasi ditemukan</string>
 
-    <!-- Akun demo -->
-    <string name="akun_admin_username" translatable="false">admin</string>
-    <string name="akun_admin_password" translatable="false">admin12345</string>
+    <!-- Ikon / aksesibilitas -->
+    <string name="cd_back">Kembali</string>
+    <string name="cd_notifications">Lihat notifikasi</string>
+    <string name="cd_logout">Keluar dari akun</string>
+    <string name="cd_share">Bagikan</string>
+    <string name="cd_favorite">Simpan ke tersimpan</string>
+    <string name="cd_unfavorite">Hapus dari tersimpan</string>
+    <string name="cd_avatar">Foto profil</string>
+    <string name="cd_camera">Ubah foto profil</string>
+    <string name="cd_weather_loading">Memuat cuaca Lombok.</string>
+    <string name="cd_weather_unavailable">Cuaca Lombok tidak tersedia. Ketuk untuk mencoba lagi.</string>
+    <string name="cd_weather_summary">Cuaca Lombok: %1$s, %2$d derajat, terasa %3$d derajat. Kelembapan %4$d persen, angin %5$d kilometer per jam, indeks UV %6$s. Ketuk untuk memperbarui.</string>
+    <string name="cd_logo">Logo Jelajah Lombok</string>
+    <string name="cd_unread_dot">Belum dibaca</string>
 
-    <!-- Halaman dashboard -->
-    <string name="judul_dashboard">Dashboard Lombok</string>
-    <string name="label_pesona">PESONA ALAM</string>
-    <string name="judul_pesona_lombok">Lombok</string>
-    <string name="lokasi_lombok">Pulau Lombok, Nusa Tenggara Barat</string>
-    <string name="selamat_datang_dashboard">Selamat Datang di Dashboard</string>
-    <string name="subjudul_dashboard">Login berhasil. Saatnya menjelajahi keindahan alam Lombok.</string>
-    <string name="judul_info_lombok">Keindahan Alam Lombok</string>
-    <string name="deskripsi_lombok">Lombok dikenal sebagai Pulau Seribu Masjid yang juga menyimpan lanskap alam memukau: gunung berapi, pantai berpasir putih, laut biru jernih, dan hutan tropis yang masih alami.</string>
-    <string name="judul_rinjani">Gunung Rinjani</string>
-    <string name="info_rinjani">Gunung berapi setinggi 3.726 mdpl dengan Danau Segara Anak yang jernih di dalam kawahnya.</string>
-    <string name="judul_pantai">Pantai dan Gili</string>
-    <string name="info_pantai">Pantai Kuta Mandalika, Tanjung Aan, dan Gili Trawangan menawarkan pasir putih serta air laut yang biru jernih.</string>
-    <string name="judul_air_terjun">Air Terjun</string>
-    <string name="info_air_terjun">Sendang Gile dan Tiu Kelep di kaki Rinjani dikelilingi hutan tropis yang sejuk dan asri.</string>
-    <string name="tombol_baca_selengkapnya">Baca Selengkapnya</string>
-    <string name="tombol_logout">Logout</string>
-    <string name="logout_berhasil">Logout berhasil. Sampai jumpa!</string>
-    <string name="kredit_foto">Sumber foto: Wikimedia Commons (CC0 dan CC BY-SA 4.0)</string>
-    <string name="deskripsi_gambar_rinjani">Gunung Rinjani dengan Danau Segara Anak</string>
-    <string name="deskripsi_gambar_pantai">Pantai dan perbukitan di Lombok</string>
-    <string name="deskripsi_gambar_air_terjun">Air Terjun Tiu Kelep di Lombok</string>
+    <!-- Autentikasi bersama -->
+    <string name="auth_eyebrow">PESONA LOMBOK</string>
+    <string name="auth_headline">Temukan sisi lain Lombok.</string>
+    <string name="auth_sub">Pantai tersembunyi, kuliner pedas, dan matahari terbenam dalam satu genggaman.</string>
+    <string name="hint_identifier">Email atau username</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Kata sandi</string>
+    <string name="hint_full_name">Nama lengkap</string>
+    <string name="hint_phone">Nomor telepon</string>
+    <string name="hint_password_confirm">Konfirmasi kata sandi</string>
+    <string name="action_login">Masuk</string>
+    <string name="action_forgot_password">Lupa kata sandi?</string>
+    <string name="action_register">Daftar sekarang</string>
+    <string name="action_create_account">Buat akun</string>
+    <string name="action_login_now">Masuk di sini</string>
+    <string name="action_send_reset">Kirim kode verifikasi</string>
+    <string name="action_back_login">Kembali ke halaman masuk</string>
+    <string name="action_resend">Kirim ulang kode</string>
+    <string name="text_no_account">Belum punya akun?</string>
+    <string name="text_have_account">Sudah punya akun?</string>
 
-    <!-- Halaman informasi lengkap -->
-    <string name="judul_informasi">Informasi Alam Lombok</string>
-    <string name="label_informasi_lengkap">INFORMASI LENGKAP</string>
-    <string name="judul_hero_informasi">Mengenal Alam Lombok</string>
-    <string name="deskripsi_gambar_hero_informasi">Gunung Rinjani terlihat dari Gili Trawangan</string>
-    <string name="intro_informasi">Pulau Lombok di Nusa Tenggara Barat menyimpan lanskap yang beragam, mulai dari gunung berapi, pantai berpasir putih, hingga air terjun di tengah hutan tropis. Berikut informasi lengkap tentang tiga keindahan alam yang paling dikenal dari Pulau Seribu Masjid.</string>
-    <string name="detail_rinjani_1">Gunung Rinjani adalah gunung berapi aktif setinggi 3.726 mdpl dan menjadi gunung berapi tertinggi kedua di Indonesia. Kawasannya termasuk Taman Nasional Gunung Rinjani, rumah bagi lutung, rusa, dan berbagai burung endemik. Di dalam kawahnya terbentang Danau Segara Anak yang berwarna biru kehijauan dan dianggap sakral oleh masyarakat sekitar.</string>
-    <string name="detail_rinjani_2">Pendakian umumnya dimulai dari Sembalun yang melewati padang savana, atau dari Senaru yang melewati hutan hujan tropis. Dari Plawangan Sembalun, pendaki dapat menikmati panorama danau dan puncak Rinjani, terutama saat matahari terbit. Waktu terbaik untuk mendaki adalah musim kemarau, sekitar April hingga November.</string>
-    <string name="detail_pantai_1">Pantai Kuta Mandalika terkenal dengan pasir putih, air laut biru, dan perbukitan karang di sekitarnya. Tidak jauh dari sana, Tanjung Aan menawarkan teluk dengan pasir yang lembut dan ombak yang tenang. Kawasan ini juga dikenal sebagai lokasi Sirkuit Mandalika.</string>
-    <string name="detail_pantai_2">Di sisi barat laut Lombok terdapat tiga Gili, yaitu Trawangan, Meno, dan Air. Gili Trawangan paling ramai dengan kafe serta aktivitas snorkeling, sedangkan Gili Meno lebih tenang. Ketiganya cocok untuk menikmati matahari terbenam dan melihat kehidupan bawah laut yang jernih.</string>
-    <string name="detail_air_terjun_1">Sendang Gile dan Tiu Kelep berada di Desa Senaru, di kaki Gunung Rinjani. Sendang Gile dapat dicapai dengan berjalan kaki sekitar 15 menit dari pintu masuk, sedangkan Tiu Kelep membutuhkan trekking lebih jauh melewati aliran air dan hutan tropis.</string>
-    <string name="detail_air_terjun_2">Air terjun ini berasal dari mata air pegunungan Rinjani yang mengalir jernih sepanjang tahun. Udara di sekitarnya sejuk dan rindang karena dikelilingi pepohonan. Datanglah pagi hari, gunakan alas kaki anti selip, dan ikuti arahan pemandu lokal agar perjalanan tetap aman.</string>
-    <string name="tombol_kembali_informasi">Kembali ke Dashboard</string>
-    <string name="kredit_foto_lengkap">Sumber foto: Jonas Verstuyft, HannoSEA, dan Lasthib (CC0); Yon illahi (CC BY-SA 4.0) via Wikimedia Commons.</string>
+    <!-- Login -->
+    <string name="auth_login_title">Masuk ke Jelajah Lombok</string>
+    <string name="auth_login_sub">Lanjutkan rencana perjalananmu.</string>
+    <string name="demo_account">Admin: admin / admin12345 · User: cassiel / cassiel12345</string>
+    <string name="error_login_empty">Isi email dan kata sandi terlebih dahulu.</string>
+    <string name="error_login_invalid">Email atau kata sandi salah. Coba lagi.</string>
+    <string name="login_welcome">Selamat datang, %1$s!</string>
+
+    <!-- Register -->
+    <string name="register_eyebrow">AKUN BARU</string>
+    <string name="register_title">Mulai jelajahmu</string>
+    <string name="register_sub">Satu akun untuk menyimpan destinasi dan rencana liburanmu.</string>
+    <string name="error_name_required">Nama wajib diisi.</string>
+    <string name="error_email_invalid">Masukkan email yang valid.</string>
+    <string name="error_phone_invalid">Gunakan nomor telepon minimal 9 digit.</string>
+    <string name="error_password_short">Gunakan minimal 8 karakter.</string>
+    <string name="error_password_mismatch">Konfirmasi kata sandi belum sama.</string>
+    <string name="error_email_used">Email ini sudah terdaftar.</string>
+    <string name="register_success">Akun berhasil dibuat. Selamat menjelajah!</string>
+
+    <!-- Lupa kata sandi -->
+    <string name="forgot_title">Lupa kata sandi?</string>
+    <string name="forgot_sub">Masukkan email yang terdaftar. Kami akan membuat kode verifikasi 6 digit untuk membuat kata sandi baru.</string>
+    <string name="error_email_empty">Masukkan email terlebih dahulu.</string>
+    <string name="forgot_success_title">Cek emailmu</string>
+    <string name="forgot_success_sub">Kode verifikasi sudah dibuat untuk\n%1$s</string>
+    <string name="forgot_success_note">Ikuti tautan di email untuk membuat kata sandi baru. Jika tidak menemukannya, periksa folder spam.</string>
+    <string name="forgot_resent">Tautan reset dikirim ulang.</string>
+    <string name="forgot_demo_note">Mode demo: kode verifikasi ditampilkan di layar, bukan dikirim lewat email.</string>
+
+    <!-- Beranda -->
+    <string name="home_greeting_morning">Selamat pagi,</string>
+    <string name="home_greeting_afternoon">Selamat siang,</string>
+    <string name="home_greeting_evening">Selamat sore,</string>
+    <string name="home_greeting_night">Selamat malam,</string>
+    <string name="favorite_added">Disimpan ke daftar tersimpan.</string>
+    <string name="favorite_removed">Dihapus dari daftar tersimpan.</string>
+    <string name="weather_location">Lombok, NTB</string>
+    <string name="weather_loading">Memuat cuaca…</string>
+    <string name="weather_unavailable">Cuaca tidak tersedia</string>
+    <string name="weather_retry">Ketuk untuk mencoba lagi</string>
+    <string name="weather_temp_placeholder">—°</string>
+    <string name="weather_value_placeholder">—</string>
+    <string name="weather_temp_format">%1$d°</string>
+    <string name="weather_feels_format">Terasa seperti %1$d°</string>
+    <string name="weather_humidity">Kelembapan</string>
+    <string name="weather_humidity_format">%1$d%%</string>
+    <string name="weather_wind">Angin</string>
+    <string name="weather_wind_format">%1$d km/j</string>
+    <string name="weather_uv">Indeks UV</string>
+    <string name="weather_uv_format">%1$s (%2$s)</string>
+    <string name="weather_uv_low">Rendah</string>
+    <string name="weather_uv_moderate">Sedang</string>
+    <string name="weather_uv_high">Tinggi</string>
+    <string name="weather_uv_very_high">Sangat tinggi</string>
+    <string name="weather_uv_extreme">Ekstrem</string>
+    <string name="section_menu_title">Butuh apa hari ini?</string>
+    <string name="section_menu_sub">Menu cepat untuk perjalananmu</string>
+    <string name="section_destination">Rekomendasi destinasi</string>
+    <string name="section_destination_sub">Pilihan terbaik minggu ini</string>
+    <string name="section_culinary">Kuliner khas</string>
+    <string name="section_culinary_sub">Rasa lokal yang wajib dicoba</string>
+    <string name="promo_eyebrow">RENCANA PERJALANAN</string>
+    <string name="promo_title">Tiga hari menjelajah Lombok</string>
+    <string name="promo_sub">Dari Rinjani sampai Gili dalam satu alur yang santai.</string>
+    <string name="action_start_plan">Susun rencana</string>
+    <string name="footer_credit">Foto oleh kontributor Wikimedia Commons · Cuaca oleh Open-Meteo · Dibuat untuk eksplorasi Lombok</string>
+
+    <!-- Menu beranda -->
+    <string name="menu_destination_title">Destinasi</string>
+    <string name="menu_destination_sub">Gunung, pantai, budaya</string>
+    <string name="menu_culinary_title">Kuliner</string>
+    <string name="menu_culinary_sub">Rasa khas Sasak</string>
+    <string name="menu_stay_title">Penginapan</string>
+    <string name="menu_stay_sub">Istirahat yang nyaman</string>
+    <string name="menu_activity_title">Aktivitas</string>
+    <string name="menu_activity_sub">Trekking hingga snorkeling</string>
+    <string name="menu_event_title">Event Budaya</string>
+    <string name="menu_event_sub">Kalender acara lokal</string>
+    <string name="menu_trip_title">Rencana Trip</string>
+    <string name="menu_trip_sub">Susun itinerary</string>
+
+    <!-- Jelajah -->
+    <string name="explore_eyebrow">TEMUKAN</string>
+    <string name="explore_title">Jelajah Lombok</string>
+    <string name="explore_sub">Temukan tempat yang paling kamu suka.</string>
+    <string name="hint_search_destination">Cari destinasi atau daerah</string>
+    <string name="filter_all">Semua</string>
+    <string name="filter_mountain">Gunung</string>
+    <string name="filter_beach">Pantai</string>
+    <string name="filter_island">Pulau</string>
+    <string name="filter_waterfall">Air terjun</string>
+    <string name="filter_culture">Budaya</string>
+    <string name="filter_hill">Bukit</string>
+    <string name="empty_search_title">Belum ketemu</string>
+    <string name="empty_search_sub">Coba kata kunci atau kategori lain.</string>
+    <string name="empty_saved_title">Belum ada item tersimpan</string>
+    <string name="empty_saved_sub">Tap ikon hati pada destinasi, kuliner, penginapan, aktivitas, atau event budaya untuk menyimpannya di sini.</string>
+    <string name="action_explore">Jelajahi destinasi</string>
+    <string name="action_reset_filter">Atur ulang filter</string>
+    <string name="saved_eyebrow">KOLEKSI PRIBADI</string>
+    <string name="saved_title">Tersimpan</string>
+    <string name="saved_sub">Destinasi, kuliner, dan pengalaman favoritmu.</string>
+
+    <!-- Profil -->
+    <string name="profile_eyebrow">AKUN SAYA</string>
+    <string name="profile_title">Profil</string>
+    <string name="profile_sub">Atur akun dan preferensimu.</string>
+    <string name="profile_tagline">Petualang Lombok</string>
+    <string name="profile_local_note">Akun, konten, favorit, dan rencana trip tersimpan di server.</string>
+    <string name="action_send_email">Kirim email</string>
+    <string name="settings_account_section">AKUN</string>
+    <string name="settings_other_section">LAINNYA</string>
+    <string name="settings_edit_profile">Edit profil</string>
+    <string name="settings_edit_profile_sub">Foto, nama, dan kontak</string>
+    <string name="settings_password">Ubah kata sandi</string>
+    <string name="settings_password_sub">Jaga keamanan akunmu</string>
+    <string name="settings_notifications">Notifikasi</string>
+    <string name="settings_notifications_sub">Pengingat dan info perjalanan</string>
+    <string name="settings_help">Pusat bantuan</string>
+    <string name="settings_help_sub">Hubungi tim Jelajah</string>
+    <string name="settings_about">Tentang aplikasi</string>
+    <string name="settings_about_sub">Versi, kredit foto, dan lisensi</string>
+    <string name="action_logout">Keluar dari akun</string>
+    <string name="logout_title">Keluar dari akun?</string>
+    <string name="logout_message">Kamu perlu masuk kembali untuk melanjutkan perjalanan.</string>
+    <string name="logout_confirm">Keluar</string>
+    <string name="logout_success">Kamu telah keluar.</string>
+    <string name="help_title">Pusat bantuan</string>
+    <string name="help_message">Butuh bantuan? Kirim email ke halo@jelajahlombok.id. Kami akan membalas dalam 1×24 jam.</string>
+    <string name="help_no_email">Tidak ada aplikasi email yang tersedia.</string>
+    <string name="about_title">Tentang Jelajah Lombok</string>
+    <string name="about_message">Jelajah Lombok adalah konsep aplikasi perjalanan untuk menemukan destinasi, kuliner, penginapan, aktivitas, event budaya, dan rencana perjalanan di Lombok.\n\nVersi 1.0\n\nFoto: Dhika Ayu Agustin Cahyani, Midori, Fery Indrawan, Adudu Hijau 123, Pradnyanandana, NFarras, Jonas Verstuyft, HannoSEA, Lasthib, Yon illahi, Focusfeel, Ferryans1506, Mount Trekking Rinjani, First Lombok Tour, Jansl1337, Ramantara, San jmx, Anis Mujahid Akbar, Hadiyat Ramantara, dan kontributor Wikimedia Commons. Lisensi CC BY, CC BY-SA, serta CC0.\n\nFont: Plus Jakarta Sans © Tokotype (SIL Open Font License 1.1).\n\nAkun, konten, favorit, dan rencana trip tersimpan di server lombokapps.</string>
+    <string name="about_version">Jelajah Lombok · Versi 1.0</string>
+
+    <!-- Edit profil -->
+    <string name="edit_profile_title">Edit profil</string>
+    <string name="edit_profile_photo_note">Ketuk foto untuk memilih gambar dari galeri.</string>
+    <string name="action_change_photo">Ganti foto</string>
+    <string name="action_remove_photo">Hapus foto</string>
+    <string name="edit_profile_identity_section">IDENTITAS</string>
+    <string name="hint_city">Kota asal</string>
+    <string name="hint_bio">Tentang kamu</string>
+    <string name="error_profile_name">Nama tidak boleh kosong.</string>
+    <string name="error_profile_phone">Nomor telepon tidak valid.</string>
+    <string name="profile_saved">Profil berhasil diperbarui.</string>
+
+    <!-- Ubah kata sandi -->
+    <string name="change_password_title">Ubah kata sandi</string>
+    <string name="change_password_sub">Gunakan kombinasi yang kuat dan mudah kamu ingat.</string>
+    <string name="hint_current_password">Kata sandi saat ini</string>
+    <string name="hint_new_password">Kata sandi baru</string>
+    <string name="hint_confirm_new_password">Ulangi kata sandi baru</string>
+    <string name="password_rule_length">Minimal 8 karakter</string>
+    <string name="password_rule_case">Huruf besar dan kecil</string>
+    <string name="password_rule_number">Mengandung angka</string>
+    <string name="password_strength_weak">Lemah</string>
+    <string name="password_strength_medium">Cukup</string>
+    <string name="password_strength_strong">Kuat</string>
+    <string name="error_current_password">Kata sandi saat ini salah.</string>
+    <string name="error_new_password_same">Kata sandi baru harus berbeda dari yang lama.</string>
+    <string name="error_password_requirements">Kata sandi harus memiliki huruf besar, huruf kecil, dan angka.</string>
+    <string name="password_changed">Kata sandi berhasil diubah.</string>
+    <string name="action_update_password">Perbarui kata sandi</string>
+
+    <!-- Notifikasi -->
+    <string name="notifications_title">Notifikasi</string>
+    <string name="notifications_sub">Info perjalanan dan pengingat untukmu.</string>
+    <string name="notifications_mark_all">Tandai dibaca</string>
+    <string name="notifications_marked">Semua notifikasi ditandai dibaca.</string>
+    <string name="notif_1_title">Waktu terbaik ke Rinjani</string>
+    <string name="notif_1_message">Juli sampai September punya langit paling cerah untuk pendakian.</string>
+    <string name="notif_1_time">Baru saja</string>
+    <string name="notif_2_title">Bau Nyale segera hadir</string>
+    <string name="notif_2_message">Pantai Seger akan ramai pada akhir Februari. Rencanakan lebih awal.</string>
+    <string name="notif_2_time">2 jam lalu</string>
+    <string name="notif_3_title">Kuliner baru di Kuta</string>
+    <string name="notif_3_message">Tiga warung ayam taliwang rekomendasi warga sudah masuk daftar kami.</string>
+    <string name="notif_3_time">Kemarin</string>
+    <string name="notif_4_title">Rencana trip 3 hari</string>
+    <string name="notif_4_message">Itinerary Lombok dari timur ke barat siap kamu ikuti.</string>
+    <string name="notif_4_time">3 hari lalu</string>
+
+    <!-- Detail destinasi -->
+    <string name="detail_about">Tentang destinasi</string>
+    <string name="detail_highlights">Highlight</string>
+    <string name="detail_facilities">Fasilitas</string>
+    <string name="detail_location">Lokasi</string>
+    <string name="detail_best_time">Waktu terbaik</string>
+    <string name="detail_fact_ticket">Tiket masuk</string>
+    <string name="detail_fact_duration">Durasi</string>
+    <string name="detail_fact_hours">Jam buka</string>
+    <string name="detail_open_maps">Buka di Maps</string>
+    <string name="detail_save">Simpan destinasi</string>
+    <string name="detail_saved">Tersimpan</string>
+    <string name="detail_share_text">Lihat %1$s di Jelajah Lombok.</string>
+    <string name="share_with">Bagikan lewat</string>
+    <string name="detail_not_found">Destinasi tidak ditemukan.</string>
+    <string name="detail_maps_error">Tidak ada aplikasi peta yang tersedia.</string>
+    <string name="culinary_hero_label">KULINER KHAS LOMBOK</string>
+
+    <!-- Detail kuliner -->
+    <string name="culinary_about">Tentang kuliner</string>
+    <string name="culinary_flavour">Cita rasa</string>
+    <string name="culinary_best_at">Paling nikmat disantap</string>
+    <string name="culinary_price_label">Kisaran harga</string>
+    <string name="culinary_reviews_label">Ulasan</string>
+    <string name="culinary_tips_title">Tips mencoba</string>
+    <string name="culinary_related_title">Destinasi terdekat</string>
+    <string name="culinary_related_sub">Lanjutkan perjalanan setelah makan.</string>
+    <string name="culinary_related_cta">Lihat destinasi</string>
+    <string name="culinary_not_found">Kuliner tidak ditemukan.</string>
+
+    <!-- Detail menu -->
+    <string name="menu_page_destination_sub">Dari puncak Rinjani sampai pasir putih di selatan.</string>
+    <string name="menu_page_culinary_sub">Bumbu, asap, dan kesegaran khas Lombok.</string>
+    <string name="menu_page_stay_sub">Pilihan menginap dari tepi pantai sampai kaki gunung.</string>
+    <string name="menu_page_activity_sub">Isi hari dengan gerak dan cerita baru.</string>
+    <string name="menu_page_event_sub">Rayakan budaya Sasak sepanjang tahun.</string>
+    <string name="menu_page_trip_sub">Rangkaian tiga hari yang bisa kamu ikuti.</string>
+    <string name="menu_count_destination">%1$d destinasi</string>
+    <string name="menu_count_culinary">%1$d kuliner</string>
+    <string name="menu_count_stay">%1$d penginapan</string>
+    <string name="menu_count_activity">%1$d aktivitas</string>
+    <string name="menu_count_event">%1$d acara</string>
+    <string name="menu_count_trip">%1$d hari</string>
+    <string name="label_detail">Detail</string>
+    <string name="separator_dot" translatable="false">·</string>
+
+    <!-- Database / umum -->
+    <string name="action_processing">Memproses…</string>
+    <string name="error_network">Tidak dapat terhubung ke server. Periksa koneksi lalu coba lagi.</string>
+    <string name="error_loading_data">Gagal memuat data dari server.</string>
+    <string name="action_retry">Coba lagi</string>
+    <string name="action_delete">Hapus</string>
+    <string name="action_edit">Ubah</string>
+    <string name="action_add">Tambah</string>
+    <string name="action_save">Simpan</string>
+
+    <!-- Reset kata sandi berbasis database -->
+    <string name="forgot_reset_title">Buat kata sandi baru</string>
+    <string name="forgot_code_eyebrow">KODE VERIFIKASI · MODE DEMO</string>
+    <string name="forgot_code_note">Kode ini biasanya dikirim lewat email. Pada prototipe ini kode ditampilkan langsung dan berlaku 15 menit.</string>
+    <string name="hint_reset_code">Kode 6 digit</string>
+    <string name="action_save_new_password">Simpan kata sandi baru</string>
+    <string name="error_email_not_found">Email ini belum terdaftar.</string>
+    <string name="error_reset_code">Kode tidak valid atau sudah kedaluwarsa.</string>
+    <string name="password_reset_success">Kata sandi berhasil diperbarui. Silakan masuk.</string>
+
+    <!-- Rencana trip -->
+    <string name="trip_plans_title">Rencana Trip</string>
+    <string name="trip_plans_sub">Itinerary pribadi yang tersimpan di akunmu.</string>
+    <string name="trip_new">Rencana baru</string>
+    <string name="trip_edit">Ubah rencana</string>
+    <string name="trip_title_hint">Judul rencana</string>
+    <string name="trip_start_date">Tanggal mulai</string>
+    <string name="trip_end_date">Tanggal selesai</string>
+    <string name="trip_notes">Catatan</string>
+    <string name="trip_save_plan">Simpan rencana</string>
+    <string name="trip_saved">Rencana trip tersimpan.</string>
+    <string name="trip_deleted">Rencana trip dihapus.</string>
+    <string name="trip_delete_title">Hapus rencana trip?</string>
+    <string name="trip_delete_message">Semua item itinerary di dalamnya ikut dihapus.</string>
+    <string name="trip_empty_title">Belum ada rencana trip</string>
+    <string name="trip_empty_sub">Buat rencana pertama dan susun itinerary-mu.</string>
+    <string name="trip_items_count">%1$d item itinerary</string>
+    <string name="trip_no_items">Belum ada item itinerary.</string>
+    <string name="trip_add_item">Tambah item</string>
+    <string name="trip_item_new">Item itinerary baru</string>
+    <string name="trip_item_edit">Ubah item itinerary</string>
+    <string name="trip_day">Hari ke-</string>
+    <string name="trip_time">Waktu</string>
+    <string name="trip_item_title">Judul kegiatan</string>
+    <string name="trip_item_notes">Catatan kegiatan</string>
+    <string name="trip_item_saved">Item itinerary tersimpan.</string>
+    <string name="trip_item_deleted">Item itinerary dihapus.</string>
+    <string name="trip_item_delete_title">Hapus item itinerary?</string>
+    <string name="trip_detail_sub">%1$s – %2$s</string>
+    <string name="trip_no_date">Tanggal belum diatur</string>
+    <string name="trip_day_badge">HARI %1$d</string>
+    <string name="error_trip_date_order">Tanggal selesai tidak boleh sebelum tanggal mulai.</string>
+
+    <!-- Panel admin -->
+    <string name="admin_panel_title">Panel Admin</string>
+    <string name="admin_panel_sub">Kelola konten dan pengguna Jelajah Lombok.</string>
+    <string name="admin_greeting">Masuk sebagai admin</string>
+    <string name="admin_open_app">Buka aplikasi pengguna</string>
+    <string name="admin_section_content">KONTEN APLIKASI</string>
+    <string name="admin_section_account">AKUN</string>
+    <string name="admin_add">Tambah data</string>
+    <string name="admin_edit">Ubah data</string>
+    <string name="admin_new">Data baru</string>
+    <string name="admin_delete_title">Hapus data?</string>
+    <string name="admin_delete_message">Data “%1$s” akan dihapus permanen.</string>
+    <string name="admin_saved">Data berhasil disimpan.</string>
+    <string name="admin_deleted">Data berhasil dihapus.</string>
+    <string name="admin_empty">Belum ada data. Tekan “Tambah data”.</string>
+    <string name="admin_field_required">Wajib diisi.</string>
+    <string name="admin_error_save">Gagal menyimpan data.</string>
+    <string name="admin_notifications">Notifikasi</string>
+    <string name="admin_users">Pengguna</string>
+    <string name="admin_logout">Keluar dari panel</string>
+    <string name="admin_stat_items">%1$d data</string>
+    <string name="admin_manage_sub">Kelola data %1$s</string>
+    <string name="admin_duplicate">Email atau username sudah dipakai.</string>
+    <string name="admin_no_destination">Tanpa destinasi</string>
+
+    <string name="image_picker_title">Pilih gambar</string>
+    <string name="image_picker_sub">Gunakan gambar yang sudah ada atau unggah dari perangkat.</string>
+    <string name="image_picker_upload">Unggah gambar</string>
+    <string name="image_picker_empty">Belum ada gambar unggahan.</string>
+    <string name="image_picker_uploaded">Gambar unggahan</string>
+    <string name="image_picker_builtin">Gambar bawaan</string>
+    <string name="image_picker_none">Tanpa gambar</string>
+    <string name="image_picker_processing">Memproses gambar…</string>
+    <string name="image_picker_uploaded_success">Gambar berhasil diunggah.</string>
+    <string name="image_picker_upload_failed">Gambar gagal diproses. Pilih file gambar lain.</string>
+    <string name="image_picker_selected">Gambar dipilih</string>
+    <string name="admin_image_field">Gambar konten</string>
+    <string name="admin_image_hint">Ketuk untuk memilih gambar bawaan atau mengunggah gambar baru.</string>
+    <string name="admin_select_hint">Ketuk untuk memilih</string>
+    <string name="admin_rating_error">Rating harus berupa angka 0–5.</string>
+    <string name="admin_sort_hint">Angka kecil tampil lebih dahulu</string>
+    <string name="role_user">Pengguna</string>
+    <string name="role_admin">Admin</string>
+
+    <!-- Notifikasi in-app -->
+    <string name="notice_success_title">Berhasil</string>
+    <string name="notice_error_title">Gagal</string>
+    <string name="notice_info_title">Info</string>
+    <string name="notice_dismiss">Tutup notifikasi</string>
+
+    <!-- Detail penginapan / aktivitas / event -->
+    <string name="experience_about_lodging">Tentang penginapan</string>
+    <string name="experience_about_activity">Tentang aktivitas</string>
+    <string name="experience_about_event">Tentang event budaya</string>
+    <string name="experience_fact_price">Harga</string>
+    <string name="experience_fact_price_night">Harga/malam</string>
+    <string name="experience_fact_ticket">Tiket</string>
+    <string name="experience_fact_duration">Durasi</string>
+    <string name="experience_fact_schedule">Jadwal</string>
+    <string name="experience_period">Periode</string>
+    <string name="experience_save">Simpan ke tersimpan</string>
+    <string name="experience_saved">Tersimpan</string>
+    <string name="experience_not_found">Konten tidak ditemukan.</string>
+    <string name="experience_open_maps">Buka lokasi di Maps</string>
 </resources>

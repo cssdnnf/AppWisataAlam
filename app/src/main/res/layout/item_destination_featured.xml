@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/featuredCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="14dp"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardCornerRadius="26dp"
+    app:cardElevation="0dp"
+    app:rippleColor="@color/nav_ripple"
+    app:strokeWidth="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="174dp">
+
+            <ImageView
+                android:id="@+id/featuredImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_hero_scrim_bottom" />
+
+            <TextView
+                android:id="@+id/featuredCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|start"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_badge_white_90"
+                android:fontFamily="@font/plus_jakarta_sans"
+                android:paddingStart="9dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="9dp"
+                android:paddingBottom="4dp"
+                android:textColor="@color/hijau_gelap"
+                android:textFontWeight="700"
+                android:textSize="10sp" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/featuredFavorite"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_gravity="top|end"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/bg_circle_white_90"
+                android:contentDescription="@string/cd_favorite"
+                android:padding="9dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_heart"
+                app:tint="@color/teks_utama" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:orientation="vertical"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:paddingBottom="12dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_star"
+                        app:tint="@color/pasir_kuning" />
+
+                    <TextView
+                        android:id="@+id/featuredRating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:textColor="@color/white"
+                        android:textFontWeight="700"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:text="@string/separator_dot"
+                        android:textColor="@color/putih_80"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/featuredReviews"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:textColor="@color/putih_80"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/featuredTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/plus_jakarta_sans"
+                    android:maxLines="1"
+                    android:textColor="@color/white"
+                    android:textFontWeight="800"
+                    android:textSize="21sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_location"
+                        app:tint="@color/putih_80" />
+
+                    <TextView
+                        android:id="@+id/featuredLocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textColor="@color/putih_80"
+                        android:textSize="11sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="14dp"
+            android:paddingTop="11dp"
+            android:paddingEnd="14dp"
+            android:paddingBottom="11dp">
+
+            <TextView
+                android:id="@+id/featuredPrice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/plus_jakarta_sans"
+                android:textColor="@color/hijau_lombok"
+                android:textFontWeight="700"
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_tag"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="9dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="9dp"
+                android:paddingBottom="5dp">
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_clock"
+                    app:tint="@color/teks_sekunder" />
+
+                <TextView
+                    android:id="@+id/featuredDuration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:textColor="@color/teks_sekunder"
+                    android:textFontWeight="500"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="8dp"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_chevron_right"
+                app:tint="@color/hijau_lombok" />
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

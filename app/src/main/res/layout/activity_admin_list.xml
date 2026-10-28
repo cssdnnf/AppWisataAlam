@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/latar_aplikasi"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/adminListHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/tombolKembaliAdminList"
+            style="@style/Widget.Jelajah.IconCircle"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:contentDescription="@string/cd_back"
+            app:icon="@drawable/ic_arrow_back" />
+
+        <TextView
+            android:id="@+id/adminListTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/plus_jakarta_sans"
+            android:textColor="@color/teks_utama"
+            android:textFontWeight="800"
+            android:textSize="21sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/tombolTambahAdmin"
+            style="@style/Widget.Jelajah.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:minHeight="44dp"
+            android:text="@string/admin_add"
+            android:textSize="12sp"
+            app:icon="@drawable/ic_add"
+            app:iconSize="16dp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/adminListRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:paddingStart="20dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="20dp"
+            android:scrollbars="none" />
+
+        <ProgressBar
+            android:id="@+id/adminListLoading"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/hijau_lombok"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/adminListEmpty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="32dp"
+            android:text="@string/admin_empty"
+            android:textColor="@color/teks_sekunder"
+            android:textSize="13sp"
+            android:visibility="gone" />
+    </FrameLayout>
+</LinearLayout>

@@ -1,143 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/latar_aplikasi"
+    android:orientation="vertical">
 
-    <!-- Latar belakang alam Lombok -->
-    <ImageView
-        android:id="@+id/gambarLatarLogin"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:contentDescription="@string/deskripsi_gambar_login"
-        android:scaleType="centerCrop"
-        android:src="@drawable/bg_lombok" />
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
-    <!-- Lapisan gelap agar teks dan kartu login mudah dibaca -->
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/lapisan_login" />
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:clipToPadding="false"
-        android:fillViewport="true"
-        android:fitsSystemWindows="true"
-        android:scrollbars="none">
-
-        <LinearLayout
+        <FrameLayout
+            android:id="@+id/mainContent"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:padding="24dp">
+            android:layout_height="match_parent" />
 
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardBackgroundColor="@color/white"
-                app:cardCornerRadius="28dp"
-                app:cardElevation="12dp"
-                app:strokeWidth="0dp">
+        <ProgressBar
+            android:id="@+id/mainLoading"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/hijau_lombok" />
+    </FrameLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="24dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/judul_login"
-                        android:textColor="@color/teks_utama"
-                        android:textSize="28sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:lineSpacingExtra="3dp"
-                        android:text="@string/subjudul_login"
-                        android:textColor="@color/teks_sekunder"
-                        android:textSize="15sp" />
-
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/inputUsername"
-                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="24dp"
-                        android:hint="@string/hint_username"
-                        app:boxCornerRadiusBottomEnd="14dp"
-                        app:boxCornerRadiusBottomStart="14dp"
-                        app:boxCornerRadiusTopEnd="14dp"
-                        app:boxCornerRadiusTopStart="14dp"
-                        app:startIconDrawable="@drawable/ic_person"
-                        app:startIconTint="@color/hijau_lombok">
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/etUsername"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:autofillHints="username"
-                            android:imeOptions="actionNext"
-                            android:inputType="text"
-                            android:maxLines="1"
-                            android:singleLine="true" />
-                    </com.google.android.material.textfield.TextInputLayout>
-
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/inputPassword"
-                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:hint="@string/hint_password"
-                        app:boxCornerRadiusBottomEnd="14dp"
-                        app:boxCornerRadiusBottomStart="14dp"
-                        app:boxCornerRadiusTopEnd="14dp"
-                        app:boxCornerRadiusTopStart="14dp"
-                        app:endIconMode="password_toggle"
-                        app:startIconDrawable="@drawable/ic_lock"
-                        app:startIconTint="@color/hijau_lombok">
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/etPassword"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:autofillHints="password"
-                            android:imeOptions="actionDone"
-                            android:inputType="textPassword"
-                            android:maxLines="1"
-                            android:singleLine="true" />
-                    </com.google.android.material.textfield.TextInputLayout>
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/tombolMasuk"
-                        android:layout_width="match_parent"
-                        android:layout_height="54dp"
-                        android:layout_marginTop="24dp"
-                        android:text="@string/tombol_masuk"
-                        android:textAllCaps="false"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        app:backgroundTint="@color/hijau_lombok"
-                        app:cornerRadius="14dp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:gravity="center"
-                        android:text="@string/petunjuk_akun"
-                        android:textColor="@color/teks_sekunder"
-                        android:textSize="12sp" />
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
-        </LinearLayout>
-    </ScrollView>
-</FrameLayout>
+    <com.example.ujicobaaplikasi.ui.navigation.BottomNavView
+        android:background="@color/latar_aplikasi"
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

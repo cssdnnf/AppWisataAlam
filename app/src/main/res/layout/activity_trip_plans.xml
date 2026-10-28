@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/latar_aplikasi"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/tripPlansHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/tombolKembaliTripPlans"
+            style="@style/Widget.Jelajah.IconCircle"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:contentDescription="@string/cd_back"
+            app:icon="@drawable/ic_arrow_back" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/plus_jakarta_sans"
+                android:text="@string/trip_plans_title"
+                android:textColor="@color/teks_utama"
+                android:textFontWeight="800"
+                android:textSize="21sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:text="@string/trip_plans_sub"
+                android:textColor="@color/teks_sekunder"
+                android:textSize="10.5sp" />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/tombolTambahTrip"
+            style="@style/Widget.Jelajah.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:minHeight="44dp"
+            android:text="@string/trip_new"
+            android:textSize="12sp"
+            app:icon="@drawable/ic_add"
+            app:iconSize="16dp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/tripPlansRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:paddingStart="20dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="20dp"
+            android:scrollbars="none" />
+
+        <LinearLayout
+            android:id="@+id/tripPlansEmpty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="32dp"
+            android:visibility="gone">
+
+            <FrameLayout
+                android:layout_width="84dp"
+                android:layout_height="84dp"
+                android:background="@drawable/bg_circle_mint">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_menu_trip"
+                    app:tint="@color/hijau_lombok" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:fontFamily="@font/plus_jakarta_sans"
+                android:text="@string/trip_empty_title"
+                android:textColor="@color/teks_utama"
+                android:textFontWeight="800"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:text="@string/trip_empty_sub"
+                android:textColor="@color/teks_sekunder"
+                android:textSize="12.5sp" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

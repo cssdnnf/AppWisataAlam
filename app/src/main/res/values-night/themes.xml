@@ -1,13 +1,39 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Tetap gunakan tema terang karena desain memakai foto dan kartu putih. -->
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
     <style name="Base.Theme.UjiCobaAplikasi" parent="Theme.Material3.Light.NoActionBar">
         <item name="colorPrimary">@color/hijau_lombok</item>
         <item name="colorOnPrimary">@color/white</item>
         <item name="colorPrimaryContainer">@color/hijau_lombok_muda</item>
         <item name="colorOnPrimaryContainer">@color/hijau_lombok_gelap</item>
+        <item name="colorSecondary">@color/koral</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSecondaryContainer">@color/koral_lembut</item>
+        <item name="colorOnSecondaryContainer">@color/koral_gelap</item>
+        <item name="colorTertiary">@color/biru</item>
+        <item name="colorOnTertiary">@color/white</item>
+        <item name="colorSurface">@color/permukaan</item>
+        <item name="colorOnSurface">@color/teks_utama</item>
+        <item name="colorSurfaceVariant">@color/permukaan_lembut</item>
+        <item name="colorOnSurfaceVariant">@color/teks_sekunder</item>
+        <item name="colorOutline">@color/garis_fokus</item>
+        <item name="colorOutlineVariant">@color/garis_lembut</item>
+        <item name="colorError">@color/merah</item>
+        <item name="colorOnError">@color/white</item>
+        <item name="colorErrorContainer">@color/merah_lembut</item>
+        <item name="colorOnErrorContainer">@color/merah</item>
+
+        <item name="elevationOverlayEnabled">false</item>
+        <item name="fontFamily">@font/plus_jakarta_sans</item>
+        <item name="android:fontFamily">@font/plus_jakarta_sans</item>
+        <item name="android:windowBackground">@color/latar_aplikasi</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:navigationBarColor">@android:color/transparent</item>
         <item name="android:windowLightStatusBar">true</item>
         <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:forceDarkAllowed">false</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:windowNoTitle">true</item>
     </style>
+
+    <style name="Theme.UjiCobaAplikasi" parent="Base.Theme.UjiCobaAplikasi" />
 </resources>

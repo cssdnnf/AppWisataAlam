@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/culinaryCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardBackgroundColor="@color/permukaan_lembut"
+    app:cardCornerRadius="22dp"
+    app:cardElevation="0dp"
+    app:rippleColor="@color/nav_ripple"
+    app:strokeColor="@color/koral_lembut"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/culinaryImage"
+            android:layout_width="92dp"
+            android:layout_height="92dp"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Jelajah.Rounded18" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/culinaryCategory"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:letterSpacing="0.1"
+                    android:maxLines="1"
+                    android:textColor="@color/koral_gelap"
+                    android:textFontWeight="700"
+                    android:textSize="9sp" />
+
+                <ImageView
+                    android:layout_width="11dp"
+                    android:layout_height="11dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_star"
+                    app:tint="@color/koral" />
+
+                <TextView
+                    android:id="@+id/culinaryRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:textColor="@color/teks_utama"
+                    android:textFontWeight="700"
+                    android:textSize="10.5sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/culinaryName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/plus_jakarta_sans"
+                android:maxLines="1"
+                android:textColor="@color/teks_utama"
+                android:textFontWeight="700"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/culinaryOrigin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/teks_sekunder"
+                android:textSize="10.5sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/culinaryPrice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/koral_gelap"
+                    android:textFontWeight="700"
+                    android:textSize="11.5sp" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/culinaryFavorite"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="4dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/cd_favorite"
+                    android:padding="7dp"
+                    android:src="@drawable/ic_heart"
+                    app:tint="@color/teks_sekunder" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_detail"
+                    android:textColor="@color/teks_tersier"
+                    android:textFontWeight="500"
+                    android:textSize="9.5sp" />
+
+                <ImageView
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_chevron_right"
+                    app:tint="@color/teks_tersier" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

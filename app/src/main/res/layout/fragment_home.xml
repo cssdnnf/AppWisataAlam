@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/homeScroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/latar_aplikasi"
+    android:clipToPadding="true"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="24dp">
+
+        <LinearLayout
+            android:id="@+id/homeHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="20dp"
+            android:paddingTop="14dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="6dp">
+
+            <com.example.ujicobaaplikasi.ui.common.AvatarView
+                android:id="@+id/homeAvatar"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:avatarInitialTextSize="17sp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textGreeting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_greeting_morning"
+                    android:textColor="@color/teks_sekunder"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/textNama"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-2dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/plus_jakarta_sans"
+                    android:maxLines="1"
+                    android:textColor="@color/teks_utama"
+                    android:textFontWeight="700"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="44dp"
+                android:layout_height="44dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/tombolNotifikasi"
+                    style="@style/Widget.Jelajah.IconCircle"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:contentDescription="@string/cd_notifications"
+                    app:icon="@drawable/ic_notifications"
+                    app:iconTint="@color/teks_utama" />
+
+                <View
+                    android:id="@+id/dotNotifikasi"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="top|end"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/bg_dot_notification"
+                    android:contentDescription="@string/cd_unread_dot" />
+            </FrameLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/tombolLogoutHeader"
+                style="@style/Widget.Jelajah.IconCircle"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="7dp"
+                android:contentDescription="@string/cd_logout"
+                app:icon="@drawable/ic_logout"
+                app:iconTint="@color/koral_gelap" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/weatherCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/bg_weather_gradient"
+            android:clickable="true"
+            android:clipToOutline="true"
+            android:contentDescription="@string/cd_weather_loading"
+            android:elevation="3dp"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:outlineProvider="background">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="19dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_location"
+                        app:tint="@color/pasir_kuning" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1"
+                        android:text="@string/weather_location"
+                        android:textColor="@color/putih_80"
+                        android:textFontWeight="500"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/textTanggal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/putih_80"
+                        android:textFontWeight="500"
+                        android:textSize="11sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textWeatherTemp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/plus_jakarta_sans"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="-0.04"
+                            android:text="@string/weather_temp_placeholder"
+                            android:textColor="@color/white"
+                            android:textFontWeight="700"
+                            android:textSize="50sp" />
+
+                        <TextView
+                            android:id="@+id/textWeatherCondition"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="@string/weather_loading"
+                            android:textColor="@color/white"
+                            android:textFontWeight="700"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/textWeatherFeels"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            android:text="@string/weather_value_placeholder"
+                            android:textColor="@color/putih_80"
+                            android:textSize="10.5sp" />
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:layout_width="100dp"
+                        android:layout_height="96dp">
+
+                        <View
+                            android:layout_width="96dp"
+                            android:layout_height="96dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/bg_weather_glow" />
+
+                        <ImageView
+                            android:id="@+id/imageWeatherIcon"
+                            android:layout_width="66dp"
+                            android:layout_height="66dp"
+                            android:layout_gravity="center"
+                            android:contentDescription="@null"
+                            android:src="@drawable/ic_weather_sun"
+                            app:tint="@color/pasir_kuning" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="9dp"
+                    android:background="@color/putih_transparan" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:contentDescription="@null"
+                            android:src="@drawable/ic_water_drop"
+                            app:tint="@color/putih_80" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/weather_humidity"
+                                android:textColor="@color/putih_80"
+                                android:textSize="9sp" />
+
+                            <TextView
+                                android:id="@+id/textWeatherHumidity"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/weather_value_placeholder"
+                                android:textColor="@color/white"
+                                android:textFontWeight="700"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="28dp"
+                        android:background="@color/putih_transparan" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="12dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:contentDescription="@null"
+                            android:src="@drawable/ic_wind"
+                            app:tint="@color/putih_80" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/weather_wind"
+                                android:textColor="@color/putih_80"
+                                android:textSize="9sp" />
+
+                            <TextView
+                                android:id="@+id/textWeatherWind"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/weather_value_placeholder"
+                                android:textColor="@color/white"
+                                android:textFontWeight="700"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="28dp"
+                        android:background="@color/putih_transparan" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="12dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:contentDescription="@null"
+                            android:src="@drawable/ic_weather_sun"
+                            app:tint="@color/putih_80" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/weather_uv"
+                                android:textColor="@color/putih_80"
+                                android:textSize="9sp" />
+
+                            <TextView
+                                android:id="@+id/textWeatherUv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/weather_value_placeholder"
+                                android:textColor="@color/white"
+                                android:textFontWeight="700"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/plus_jakarta_sans"
+                android:text="@string/section_menu_title"
+                android:textColor="@color/teks_utama"
+                android:textFontWeight="700"
+                android:textSize="19sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:text="@string/section_menu_sub"
+                android:textColor="@color/teks_sekunder"
+                android:textSize="11.5sp" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/homeMenuRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:clipToPadding="false"
+            android:nestedScrollingEnabled="false"
+            android:overScrollMode="never"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="20dp"
+            android:paddingEnd="8dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/section_destination"
+                    android:textColor="@color/teks_utama"
+                    android:textFontWeight="700"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:text="@string/section_destination_sub"
+                    android:textColor="@color/teks_sekunder"
+                    android:textSize="11.5sp" />
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/tombolLihatSemuaDestinasi"
+                style="@style/Widget.Jelajah.Button.Text"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="@string/action_see_all"
+                app:icon="@drawable/ic_arrow_forward"
+                app:iconGravity="textEnd"
+                app:iconSize="14dp" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/homeDestinationRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:clipToPadding="false"
+            android:nestedScrollingEnabled="false"
+            android:overScrollMode="never"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="20dp"
+            android:paddingEnd="8dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/section_culinary"
+                    android:textColor="@color/teks_utama"
+                    android:textFontWeight="700"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:text="@string/section_culinary_sub"
+                    android:textColor="@color/teks_sekunder"
+                    android:textSize="11.5sp" />
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/tombolLihatSemuaKuliner"
+                style="@style/Widget.Jelajah.Button.Text"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="@string/action_see_all"
+                app:icon="@drawable/ic_arrow_forward"
+                app:iconGravity="textEnd"
+                app:iconSize="14dp" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/homeCulinaryRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:clipToPadding="false"
+            android:nestedScrollingEnabled="false"
+            android:overScrollMode="never"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/bg_promo_gradient">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="bottom|end"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="8dp"
+                android:alpha="0.18"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_menu_trip"
+                app:tint="@color/hijau_lombok_gelap" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:letterSpacing="0.1"
+                    android:text="@string/promo_eyebrow"
+                    android:textColor="@color/hijau_lombok"
+                    android:textFontWeight="700"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/plus_jakarta_sans"
+                    android:maxWidth="250dp"
+                    android:text="@string/promo_title"
+                    android:textColor="@color/teks_utama"
+                    android:textFontWeight="800"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:lineSpacingExtra="2dp"
+                    android:maxWidth="250dp"
+                    android:text="@string/promo_sub"
+                    android:textColor="@color/teks_sekunder"
+                    android:textSize="11.5sp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/tombolPromoTrip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/plus_jakarta_sans"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:minHeight="40dp"
+                    android:text="@string/action_start_plan"
+                    android:textAllCaps="false"
+                    android:textColor="@color/hijau_lombok"
+                    android:textFontWeight="700"
+                    android:textSize="12sp"
+                    app:backgroundTint="@color/permukaan"
+                    app:cornerRadius="14dp" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:gravity="center"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:text="@string/footer_credit"
+            android:textColor="@color/teks_tersier"
+            android:textSize="9.5sp" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/latar_aplikasi"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/adminEditorHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="6dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/tombolKembaliAdminEditor"
+            style="@style/Widget.Jelajah.IconCircle"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:contentDescription="@string/cd_back"
+            app:icon="@drawable/ic_arrow_back" />
+
+        <TextView
+            android:id="@+id/adminEditorTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/plus_jakarta_sans"
+            android:textColor="@color/teks_utama"
+            android:textFontWeight="800"
+            android:textSize="21sp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/adminEditorScroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/adminEditorForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="20dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="16dp" />
+        </androidx.core.widget.NestedScrollView>
+
+        <ProgressBar
+            android:id="@+id/adminEditorLoading"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/hijau_lombok"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/tombolSimpanAdmin"
+        style="@style/Widget.Jelajah.Button"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="18dp"
+        android:text="@string/action_save"
+        app:icon="@drawable/ic_check"
+        app:iconSize="18dp" />
+</LinearLayout>

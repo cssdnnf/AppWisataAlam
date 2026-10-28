@@ -1,13 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#00000000</color>
 
+    <!-- Brand: deep Lombok green -->
     <color name="hijau_lombok">#0B6E4F</color>
     <color name="hijau_lombok_gelap">#064A35</color>
+    <color name="hijau_gelap">#064A35</color>
     <color name="hijau_lombok_muda">#D7EFE4</color>
-    <color name="krem_pasir">#F7F3EA</color>
-    <color name="teks_utama">#1D2B24</color>
-    <color name="teks_sekunder">#56665D</color>
-    <color name="garis_lembut">#E3E8E4</color>
+    <color name="hijau_teal">#177A60</color>
+    <color name="hijau_lembut">#E4F2EB</color>
+    <color name="hijau_lembut_ringan">#F0F8F3</color>
+
+    <!-- Surfaces: warm paper -->
+    <color name="latar_aplikasi">#F7F5EF</color>
+    <color name="permukaan">#FFFFFFFF</color>
+    <color name="permukaan_lembut">#FCFAF5</color>
+
+    <!-- Type -->
+    <color name="teks_utama">#18261F</color>
+    <color name="teks_sekunder">#5D6C64</color>
+    <color name="teks_tersier">#8B9791</color>
+    <color name="garis_lembut">#E6EAE5</color>
+    <color name="garis_fokus">#B9CEC3</color>
+
+    <!-- Accents -->
+    <color name="koral">#E4714C</color>
+    <color name="koral_gelap">#B95334</color>
+    <color name="koral_lembut">#FBEDE6</color>
+    <color name="pasir_kuning">#F6E7C1</color>
+    <color name="coklat_tua">#6E4B2A</color>
+    <color name="lavender_lembut">#EFEEFA</color>
+    <color name="lavender">#6D64B3</color>
+    <color name="biru_lembut">#E7F3F7</color>
+    <color name="biru">#2E7E93</color>
+    <color name="merah">#C84B45</color>
+    <color name="merah_lembut">#FBECEA</color>
+
+    <!-- Navigation -->
+    <color name="nav_nonaktif">#7E8C85</color>
+    <color name="nav_ripple">#1F0B6E4F</color>
+
+    <!-- Weather gradient -->
+    <color name="weather_mulai">#0A4B3A</color>
+    <color name="weather_akhir">#187C60</color>
+
+    <!-- Overlays -->
+    <color name="auth_scrim_top">#66061F17</color>
+    <color name="auth_scrim_bottom">#F2061F17</color>
+    <color name="putih_transparan">#26FFFFFF</color>
+    <color name="putih_transparan_kuat">#4DFFFFFF</color>
+    <color name="putih_80">#CCFFFFFF</color>
+    <color name="putih_transparan_ringan">#1AFFFFFF</color>
 </resources>

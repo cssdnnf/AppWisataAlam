@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="9dp"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardBackgroundColor="@color/permukaan"
+    app:cardCornerRadius="18dp"
+    app:cardElevation="0dp"
+    app:rippleColor="@color/nav_ripple"
+    app:strokeColor="@color/garis_lembut"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="14dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/adminRecordTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/plus_jakarta_sans"
+                android:maxLines="1"
+                android:textColor="@color/teks_utama"
+                android:textFontWeight="700"
+                android:textSize="14.5sp" />
+
+            <TextView
+                android:id="@+id/adminRecordSubtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="@color/teks_sekunder"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/adminRecordDelete"
+            style="@style/Widget.Jelajah.IconCircle"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="4dp"
+            android:contentDescription="@string/action_delete"
+            app:icon="@drawable/ic_delete"
+            app:iconSize="18dp"
+            app:iconTint="@color/merah" />
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="2dp"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_chevron_right"
+            app:tint="@color/teks_tersier" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

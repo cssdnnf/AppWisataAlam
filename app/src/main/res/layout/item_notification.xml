@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/notifCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardBackgroundColor="@color/permukaan"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="0dp"
+    app:rippleColor="@color/nav_ripple"
+    app:strokeColor="@color/garis_lembut"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:orientation="horizontal"
+        android:padding="13dp">
+
+        <FrameLayout
+            android:id="@+id/notifIconContainer"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:background="@drawable/bg_menu_icon_tile">
+
+            <ImageView
+                android:id="@+id/notifIcon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:contentDescription="@null" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/notifTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/plus_jakarta_sans"
+                android:textColor="@color/teks_utama"
+                android:textFontWeight="700"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/notifMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:lineSpacingExtra="2dp"
+                android:textColor="@color/teks_sekunder"
+                android:textSize="11.5sp" />
+
+            <TextView
+                android:id="@+id/notifTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/teks_tersier"
+                android:textFontWeight="500"
+                android:textSize="9.5sp" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/notifDot"
+            android:layout_width="9dp"
+            android:layout_height="9dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/bg_dot_notification"
+            android:contentDescription="@string/cd_unread_dot" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

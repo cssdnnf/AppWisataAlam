@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/latar_aplikasi"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/editProfileHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="6dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/tombolKembaliEditProfil"
+            style="@style/Widget.Jelajah.IconCircle"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:contentDescription="@string/cd_back"
+            app:icon="@drawable/ic_arrow_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:fontFamily="@font/plus_jakarta_sans"
+            android:text="@string/edit_profile_title"
+            android:textColor="@color/teks_utama"
+            android:textFontWeight="800"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/editProfileScroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingTop="6dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="24dp">
+
+            <FrameLayout
+                android:id="@+id/avatarPicker"
+                android:layout_width="112dp"
+                android:layout_height="112dp"
+                android:layout_gravity="center_horizontal"
+                android:clickable="true"
+                android:focusable="true">
+
+                <com.example.ujicobaaplikasi.ui.common.AvatarView
+                    android:id="@+id/editAvatar"
+                    android:layout_width="104dp"
+                    android:layout_height="104dp"
+                    android:layout_gravity="center"
+                    app:avatarInitialTextSize="36sp" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:layout_gravity="bottom|end"
+                    app:cardBackgroundColor="@color/hijau_lombok"
+                    app:cardCornerRadius="17dp"
+                    app:cardElevation="2dp"
+                    app:strokeColor="@color/latar_aplikasi"
+                    app:strokeWidth="2dp">
+
+                    <ImageView
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/cd_camera"
+                        android:src="@drawable/ic_camera"
+                        app:tint="@color/white" />
+                </com.google.android.material.card.MaterialCardView>
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="2dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/tombolGantiFoto"
+                    style="@style/Widget.Jelajah.Button.Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="@string/action_change_photo" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/tombolHapusFoto"
+                    style="@style/Widget.Jelajah.Button.Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="@string/action_remove_photo"
+                    android:textColor="@color/merah"
+                    app:iconTint="@color/merah" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/edit_profile_photo_note"
+                android:textColor="@color/teks_tersier"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:letterSpacing="0.12"
+                android:text="@string/edit_profile_identity_section"
+                android:textColor="@color/teks_tersier"
+                android:textFontWeight="700"
+                android:textSize="9.5sp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:cardBackgroundColor="@color/permukaan"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/garis_lembut"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="18dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/inputEditNama"
+                        style="@style/Widget.Jelajah.TextInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_full_name"
+                        app:startIconDrawable="@drawable/ic_person">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etEditNama"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:autofillHints="name"
+                            android:imeOptions="actionNext"
+                            android:inputType="textPersonName"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:textColor="@color/teks_utama"
+                            android:textSize="15sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/inputEditEmail"
+                        style="@style/Widget.Jelajah.TextInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:hint="@string/hint_email"
+                        app:startIconDrawable="@drawable/ic_mail">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etEditEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:autofillHints="emailAddress"
+                            android:imeOptions="actionNext"
+                            android:inputType="textEmailAddress"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:textColor="@color/teks_utama"
+                            android:textSize="15sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/inputEditTelepon"
+                        style="@style/Widget.Jelajah.TextInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:hint="@string/hint_phone"
+                        app:startIconDrawable="@drawable/ic_phone">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etEditTelepon"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:autofillHints="phoneNational"
+                            android:imeOptions="actionNext"
+                            android:inputType="phone"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:textColor="@color/teks_utama"
+                            android:textSize="15sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/inputEditKota"
+                        style="@style/Widget.Jelajah.TextInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:hint="@string/hint_city"
+                        app:startIconDrawable="@drawable/ic_location">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etEditKota"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:autofillHints="postalAddress"
+                            android:imeOptions="actionNext"
+                            android:inputType="textCapWords"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:textColor="@color/teks_utama"
+                            android:textSize="15sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/inputEditBio"
+                        style="@style/Widget.Jelajah.TextInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:hint="@string/hint_bio"
+                        app:counterEnabled="true"
+                        app:counterMaxLength="160"
+                        app:counterTextColor="@color/teks_tersier"
+                        app:startIconDrawable="@drawable/ic_edit">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etEditBio"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="top"
+                            android:inputType="textCapSentences|textMultiLine"
+                            android:maxLength="160"
+                            android:maxLines="5"
+                            android:minLines="3"
+                            android:textColor="@color/teks_utama"
+                            android:textSize="14sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:lineSpacingExtra="2dp"
+                android:text="@string/profile_local_note"
+                android:textColor="@color/teks_tersier"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="4dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/tombolSimpanProfil"
+            style="@style/Widget.Jelajah.Button"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:text="@string/action_save_changes" />
+    </LinearLayout>
+
+    <com.example.ujicobaaplikasi.ui.navigation.BottomNavView
+        android:background="@color/latar_aplikasi"
+        android:id="@+id/editProfileBottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
