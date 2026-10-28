@@ -8,7 +8,7 @@ package com.example.ujicobaaplikasi.data
  * boleh ikut didistribusikan di dalam APK.
  */
 object DbConfig {
-    const val HOST = "45.127.35.252"
+    const val HOST = "127.0.0.1"
     const val PORT = 3306
     const val DATABASE = "lombokapps"
     const val USER = "apps"
